@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product</title>
+    <link rel="stylesheet" href="add_product.css">
+    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <center><h2>Add Product</h2></center>
+        <hr>
+        <div class="forms">
+            <form action="" class="forms1">   
+                <label for="">Product name:</label>
+                <input type="text" name="pname" id="pname"  placeholder="Enter your product name"><br>
+                <label for="">Description:</label>
+                <input type="text" name="desc" id="desc" placeholder="Type Here"><br><br>
+                <label for="">Category:</label>
+                <select name="" id="cato">
+                    <option value="categories">Select</option>
+                    <option value="electronics">Electronics</option>
+                    <option value="stationary">Stationary</option>
+                    <option value="others">Others</option>
+                </select>
+                <div class="subcato">
+                <label for="" id="">Sub Category:</label>
+                <select name="" id="subcato">
+                    <option value="sub category">Select</option>
+                    <option value="computer">Computer</option>
+                    <option value="mobile">Mobile</option>
+                    <option value="others">Others</option>
+                </select>
+                </div>
+                <br>
+                <label for="">Weight:</label>
+                <input type="text" name="weight" id="weight">
+                <div class="unit">
+                <label for="" id="">Unit:</label>
+                <select name="" id="unit">
+                    <option value="kg">kg</option>
+                    <option value="other">Other</option>
+                </select>
+                </div>
+                <br>
+                <label for="">Quantity:</label>
+                <input type="text" name="qty" id="qty" placeholder="Qty">
+                <div class="amo">
+                <label for="">Amount:</label>
+                <input type="text" name="" id="amount" class="rs"  placeholder=" &#x20b9; ex:200"><br>
+                </div>
+                <center><button type="button" id="add" name="button" onclick="addNew('table')" class="btn01">Add product</button></center>
+
+
+            </form>
+        </div>
+        <hr>
+        <form action="">
+            <center><table border="1" id="table">
+                <center><tr>
+                    <th id="">ID</th>
+                    <th id="">Product Name</th>
+                    <th id="">Description</th>
+                    <th id="">Category</th>
+                    <th id="">sub category</th>
+                    <th id="">Weight</th>                   
+                    <th id="">Qty</th>
+                </tr></center>
+
+            </table></center>
+        </form>
+
+    </div>
+    <script>
+        function addNew(myTable){
+            if(document.getElementById("pname").value.length === 0){
+                alert("plaese enter the details");
+            }else{
+                var t = document.getElementById(myTable);
+                var r = table.row.length;
+                var row = table.insertRow(r);
+                var a = document.getElementById("pname").value;
+                var b = document.getElementById("desc").value;
+                var c = document.getElementById("cato").value;
+                var d = document.getElementById("subcato").value;
+                var e = document.getElementById("weight").value;
+                var f = document.getElementById("qty").value;
+                var ce1 = row.insertCell(0);
+                var element1 = document.createElement("input");
+                element1.type = "text";
+                element1.name = "textbox[]";
+                element1.value = a;
+                ce1.appendChild(element1);
+                var ce2 = row.insertCell(1);
+                var element2 = document.createElement("input");
+                element2.type = "text";
+                element2.name = "textbox[]";
+                element2.value = b;
+                ce2.appendChild(element2);
+                var ce3 = row.insertCell(2);
+                var element3 = document.createElement("input");
+                element3.type = "text";
+                element3.name = "textbox[]";
+                element3.value = c;
+                ce3.appendChild(element3);
+                var ce4 = row.insertCell(3);
+                var element4 = document.createElement("input");
+                element4.type = "text";
+                element4.name = "textbox[]";
+                element4.value = d;
+                ce4.appendChild(element4);
+                var ce5 = row.insertCell(4);
+                var element5 = document.createElement("input");
+                element5.type = "text";
+                element5.name = "textbox[]";
+                element5.value = e;
+                ce5.appendChild(element5);
+                var ce6 = row.insertCell(5);
+                var element6 = document.createElement("input");
+                element6.type = "text";
+                element6.style.width = "15%";
+                element6.name = "textbox[]";
+                element6.value = f;
+                ce6.appendChild(element6);
+
+            }
+        }
+    </script>
+</body>
+</html>

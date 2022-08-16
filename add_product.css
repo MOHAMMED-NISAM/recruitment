@@ -1,0 +1,53 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+    margin-left: 230px;
+}
+.container{
+    border: 2.5px rgb(124, 116, 116) solid;
+    border-radius: 5px;
+    width: 70%;
+}
+.forms{
+    padding: 30px;
+    line-height: 2;
+    font-weight: bold;
+
+}
+#pname{
+    border-radius: 5px;
+    border: 1px rgb(124, 116, 116)solid;
+    width: 80%;
+    float: right;
+    margin-right: 20px;
+}
+#desc{
+    border-radius: 5px;
+    border: 1px rgb(124, 116, 116)solid;
+    width: 80%;
+    height: 50px;
+    margin-right: 20px;
+    float: right;
+}
+.subcato{
+    float: right;
+    margin-right: 20px;
+}
+#cato #subcato{
+    width: 70%;
+}
+.unit{
+    float: right;
+    margin-right: 20px;
+}
+.amo{
+    float: right;
+    margin-right: 20px;
+}
+form input{
+    /* padding-left: 20px; */
+    border-radius: 5px;
+    border: 1px rgb(124, 116, 116) solid;
+}
+#table{
+    width: 100%;
+}

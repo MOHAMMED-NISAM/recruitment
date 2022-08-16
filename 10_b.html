@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+    <style>
+        body{
+            background-color: rgb(201, 226, 248);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="error"></div>
+        <form action="" id="forms" name="login">
+            <center><h2>LOGIN FORM</h2></center>
+            <div class="form-field">
+                <label for="">Email:</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+            <br>
+            <div class="form-field">
+                <label for="">Password:</label>
+                <input type="password" name="password" id="password" requiired>
+            </div>
+            <br>
+                <center><button type="submit" class="btn">LOGIN</button></center>
+                
+            
+        </form>
+    </div>
+    <script>
+        var mail = 'baabtra@gmail.com';
+        var pass = 'Baabtra@1';
+        var email = document.getElementById('email');
+        var password = document.getElementById('password');
+        if(email == mail && password == pass){
+            window.location.href = "http://127.0.0.1:5500/10_a.html";
+        }
+    </script>
+</body>
+</html> 
